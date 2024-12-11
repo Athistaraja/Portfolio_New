@@ -25,7 +25,7 @@
         <p class="description">Certified MERN Stack Developer with a strong foundation in front-end and back-end web development.
           Proficient in building responsive, scalable, and user-friendly applications. Seeking a challenging
           position to leverage my skills in creating innovative digital solutions and enhancing business processes.</p>
-        <button class="download-btn">Download CV</button>
+          <button class="download-btn" onclick="downloadCV()">Download CV</button>
         <div class="social-icons">
           <a href="#"><i class="fab fa-github"></i></a>
           <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -100,6 +100,14 @@
     </section>
     
   </div>
+  <script>
+    function downloadCV() {
+      const link = document.createElement('a');
+      link.href = 'Athistaraja-R.pdf'; // Specify the path to the PDF file
+      link.download = 'Athistaraja-R'; // Optional: specify the file name
+      link.click();
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
