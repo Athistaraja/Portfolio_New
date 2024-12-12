@@ -24,6 +24,7 @@ body {
 }
 
 /* Navigation */
+/* Navigation */
 nav {
   display: flex;
   justify-content: space-between;
@@ -137,12 +138,15 @@ nav ul li a:hover {
   background-color: #00e673;
 }
 
-/* Profile Section */
+/* Profile Section - Responsive Design */
 .profile {
   position: relative;
   width: 250px;
   height: 250px;
-  margin-top: 20px;
+  margin: 20px auto; /* Center align the profile on smaller screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile img {
@@ -150,7 +154,8 @@ nav ul li a:hover {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  position: absolute;
+  position: relative;
+  z-index: 1;
 }
 
 .circle {
@@ -158,7 +163,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-
+  z-index: 0;
 }
 
 .circle::before,
@@ -183,7 +188,6 @@ nav ul li a:hover {
   border-bottom: 2px solid #00ff88;
   animation: rotate-reverse 9s linear infinite;
 }
-
 /* Animations */
 @keyframes rotate {
   0% {
@@ -200,6 +204,31 @@ nav ul li a:hover {
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .profile {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle {
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -255,82 +284,41 @@ nav ul li a:hover {
     padding: 10px 20px;
   }
 
- /* Profile Section - Responsive Design */
-.profile {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  margin: 20px auto; /* Center align the profile on smaller screens */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  position: relative;
-  z-index: 1;
-}
-
-.circle {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.circle::before,
-.circle::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  border: 2px solid transparent;
-  animation: rotate 8s linear infinite;
-  box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88;
-}
-
-.circle::before {
-  border-top: 2px solid #00ff88;
-  border-left: 2px solid #00ff88;
-}
-
-.circle::after {
-  border-right: 2px solid #00ff88;
-  border-bottom: 2px solid #00ff88;
-  animation: rotate-reverse 9s linear infinite;
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
   .profile {
-    width: 200px;
-    height: 200px;
-  }
-
-  .circle {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content h2 {
+    font-size: 18px;
+  }
+
+  .text-content p {
+    font-size: 0.875rem;
+  }
+
+  .download-btn {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+
   .profile {
     width: 150px;
     height: 150px;
   }
-
-  .circle {
-    width: 150px;
-    height: 150px;
-  }
 }
-
 /* Contact Section */
 .contact-section {
   padding: 50px 20px;
@@ -509,5 +497,4 @@ nav ul li a:hover {
   .skill {
     width: 100%; /* Full width for smaller screens */
   }
-}
 }
