@@ -224,6 +224,9 @@ nav ul li a:hover {
   .profile {
     width: 150px;
     height: 150px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
   }
 
   .circle {
