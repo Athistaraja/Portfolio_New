@@ -72,7 +72,7 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 300px) {
   nav ul {
     flex-direction: row;  /* Ensure navigation items are in a single row */
     justify-content: center; /* Center the navigation items */
@@ -220,7 +220,7 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
   .profile {
     width: 150px;
     height: 150px;
