@@ -274,7 +274,7 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
   .profile {
     width: 150px;
     height: 150px;
