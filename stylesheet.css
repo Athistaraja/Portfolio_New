@@ -357,7 +357,7 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 320px) {
   .hero {
     display: flex;
     flex-direction: column;
