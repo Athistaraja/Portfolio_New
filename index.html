@@ -10,6 +10,7 @@
 <body>
   <div class="container">
     <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
       <ul>
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#">About</a></li>
@@ -20,6 +21,7 @@
     </nav>
     <section class="hero">
       <div class="text-content">
+        <h1 class="fade-in">Hello Everyone</h1>
         <h1>Athista Raja</h1>
         <h2>I'm a <span id="highlight" class="highlight">Frontend Developer</span></h2>
         <p class="description">Certified MERN Stack Developer with a strong foundation in front-end and back-end web development.
@@ -106,6 +108,11 @@
       link.href = 'Athistaraja-R.pdf'; // Specify the path to the PDF file
       link.download = 'Athistaraja-R'; // Optional: specify the file name
       link.click();
+    }
+
+    function toggleMenu() {
+      const navMenu = document.querySelector('nav ul');
+      navMenu.classList.toggle('active');
     }
   </script>
   <script src="script.js"></script>

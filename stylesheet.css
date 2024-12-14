@@ -24,7 +24,7 @@ body {
 }
 
 /* Navigation */
-/* Navigation */
+/* Navigation
 nav {
   display: flex;
   justify-content: space-between;
@@ -58,29 +58,82 @@ nav ul li a {
 nav ul li a.active,
 nav ul li a:hover {
   color: #00ff88;
+} */
+nav {
+  background-color: #121212;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-/* Responsive Design for Mobile Devices */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  color: #00ff88;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: row;  /* Ensure navigation items are in a single row */
-    justify-content: center; /* Center the navigation items */
+    flex-direction: column;
+    display: none;
+    background-color: #121212;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  nav ul.active {
+    display: flex;
   }
 
   nav ul li {
-    margin-left: 15px;  /* Adjust margin between items */
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 }
 
-@media (max-width: 480px) {
-  nav ul {
-    flex-direction: row;  /* Ensure navigation items are in a single row */
-    justify-content: center; /* Center the navigation items */
-  }
+nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+}
 
-  nav ul li {
-    margin-left: 10px;  /* Adjust margin between items */
-  }
+nav ul li a:hover {
+
+  text-decoration: #00e673;
+  border-radius: 5px;
 }
 
 
@@ -207,6 +260,7 @@ nav ul li a:hover {
   }
 }
 
+<<<<<<< HEAD
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .profile {
@@ -234,6 +288,8 @@ nav ul li a:hover {
     height: 150px;
   }
 }
+=======
+>>>>>>> 812b9d3 (navbar updates)
 
 
 /* Social Icons */
@@ -271,6 +327,10 @@ nav ul li a:hover {
     width: 200px;
     height: 200px;
   }
+  .circle{
+    width: 200px;
+    height: 200px;
+  }
 }
 
 
@@ -291,10 +351,15 @@ nav ul li a:hover {
     width: 180px;
     height: 180px;
   }
+  .circle{
+    width: 180px;
+    height: 180px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .hero {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -318,6 +383,10 @@ nav ul li a:hover {
   }
 
   .profile {
+    width: 150px;
+    height: 150px;
+  }
+  .circle{
     width: 150px;
     height: 150px;
   }
