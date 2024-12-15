@@ -169,6 +169,20 @@ nav ul li a:hover {
 }
 }
 
+@media (max-width: 768px) {
+  nav ul {
+    z-index: 999; /* Ensure the navbar toggle overlay is above everything */
+  }
+  .text-content h2 {
+    z-index: 1; /* Ensure the hero text remains beneath the navbar */
+  }
+  nav ul.active + .text-content h2 span {
+    visibility: hidden; /* Ensure hero text is hidden when navbar is active */
+    opacity: 0;
+  }
+}
+
+
 .text-content p {
   font-size: 1rem;
   color: #cccccc;
