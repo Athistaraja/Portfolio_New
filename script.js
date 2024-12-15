@@ -1,9 +1,16 @@
-// setInterval(() => {
-//     const text = document.querySelector('.highlight');
-//     text.classList.remove('highlight');
-//     void text.offsetWidth; // Trigger reflow to restart animation
-//     text.classList.add('highlight');
-//   }, 5000); // Restart every 5 seconds
+
+
+function downloadCV() {
+  const link = document.createElement('a');
+  link.href = 'Athistaraja-R.pdf'; // Specify the path to the PDF file
+  link.download = 'Athistaraja-R'; // Optional: specify the file name
+  link.click();
+}
+
+function toggleMenu() {
+  const navMenu = document.querySelector('nav ul');
+  navMenu.classList.toggle('active');
+}
   
 const highlightText = document.getElementById("highlight");
 
