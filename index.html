@@ -113,5 +113,34 @@
     
   </div>
   <script src="script.js"></script>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", async function (e) {
+      e.preventDefault(); // Prevent page reload
+
+      // Collect form data
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      try {
+        const response = await fetch("http://localhost:5000/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, message }),
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+          alert("Message sent successfully!");
+          document.getElementById("contactForm").reset();
+        } else {
+          alert("Failed to send message: " + result.message);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred while sending your message.");
+      }
+    });
+  </script>
 </body>
 </html>
