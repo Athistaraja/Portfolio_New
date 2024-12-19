@@ -18,7 +18,7 @@
       <ul>
         <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="#"><i class="far fa-user"></i> About</a></li>
-        <li><a href="#"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="#skills"><i class="fas fa-briefcase"></i> Skills</a></li>
         <li><a href="#"><i class="fas fa-tasks"></i> Projects</a></li>
         <li><a href="#Contact"><i class="far fa-envelope"></i> Contact</a></li>
       </ul>
@@ -99,7 +99,10 @@
         <div class="form-group">
           <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
         </div>
-        <button type="submit" class="submit-btn">Send Message</button>
+        <button type="submit" class="submit-btn" data-state="idle">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-spinner"></span>
+        </button>
       </form>    
       <div class="contact-social-icons">
         <a href="https://www.facebook.com/profile.php?id=100008082431473" class="social-link"><i class="fab fa-facebook-f"></i></a>
